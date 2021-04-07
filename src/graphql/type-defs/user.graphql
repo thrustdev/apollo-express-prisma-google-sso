@@ -1,0 +1,15 @@
+type Query {
+  authenticatedUser: User
+}
+
+type Mutation {
+  googleLogin(code: String!): User!
+}
+
+type User {
+  accessToken: String!
+  refreshToken: String
+  name: String
+  image: String
+  email: String!
+}
